@@ -1,12 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+// import App from './App';
+// import Reducer from './lesson/reducer';
+// import Effect from './lesson/useEffect';
+// import Ref from './lesson/useRef';
+// import EffectLayout from './lesson/useEffectLayouts';
+// import ForwardRef from './lesson/forwardRef/parent';
+// import Context from './lesson/context';
+// import Memo from './lesson/memo';
+ import Callback from './lesson/callback';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    {/* <Reducer /> */}
+    {/* <Effect /> */}
+    {/* <Ref/> */}
+    {/* <EffectLayout/> */}
+    {/* <ForwardRef/> */}
+    {/* <Context />  */}
+    {/* <Memo/> */}
+    <Callback/>
+
   </React.StrictMode>,
   document.getElementById('root')
 );

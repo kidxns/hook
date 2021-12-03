@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
 
 function App() {
+  const [count, setCount] = useState(0);
+  const [inputVal, setIpVal] = useState("VIP");
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  const decrement = () => {
+    setCount(count - 1);
+  };
+
+  const changeText = (e) => {
+    const newText = e.target.value;
+    setIpVal(newText);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        <button onClick={decrement}>Decrement</button> {count}
+        <button onClick={increment}>Increment</button>
+      </div>
+
+
+      <div><input onChange={changeText}></input>{inputVal}</div>
     </div>
   );
 }
